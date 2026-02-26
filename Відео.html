@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Content Master — Твій шлях до переглядів</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #161616;
+            --primary: #ff0050; /* TikTok red */
+            --secondary: #00f2ea; /* TikTok cyan */
+            --text: #ffffff;
+            --text-dim: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0; padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            padding: 60px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+
+        h1 { font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: -1px; }
+        .hero-desc { font-size: 1.2rem; opacity: 0.9; }
+
+        /* Сітка контенту */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: -40px;
+        }
+
+        .step-card {
+            background: var(--surface);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: 0 10px 30px rgba(0, 242, 234, 0.1);
+        }
+
+        .step-num {
+            font-size: 4rem;
+            font-weight: 900;
+            position: absolute;
+            top: -10px; right: 10px;
+            opacity: 0.05;
+            color: var(--secondary);
+        }
+
+        h2 { color: var(--secondary); margin-top: 0; }
+        h3 { color: var(--primary); }
+
+        .hook-box {
+            background: rgba(255, 0, 80, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Інтерактивний чек-лист */
+        .checklist-section {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 30px;
+            margin-top: 50px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .check-item input {
+            width: 25px; height: 25px;
+            accent-color: var(--primary);
+        }
+
+        .btn-action {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .btn-action:hover { background: #d60043; transform: scale(1.05); }
+
+        .step-card ul {
+            padding-left: 20px;
+            color: var(--text-dim);
+        }
+        .step-card li {
+            margin-bottom: 8px;
+        }
+
+        /* Ефект підсвітки для AI блоку */
+        .ai-card:hover {
+            background: rgba(0, 242, 234, 0.05) !important;
+            box-shadow: inset 0 0 15px rgba(0, 242, 234, 0.2);
+        }
+
+        footer { text-align: center; padding: 50px; color: var(--text-dim); font-size: 0.9rem; }
+        
+        .tip { font-style: italic; color: var(--secondary); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🎥 Video Creator Pro</h1>
+        <p class="hero-desc">Як створювати контент, який додивляються до кінця</p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="content-grid">
+        <div class="step-card">
+            <div class="step-num">01</div>
+            <h2>Ідея та "Гачок"</h2>
+            <p>Перші <b>3 секунди</b> вирішують все. Якщо ви не зачепили глядача — він гортає далі.</p>
+            <div class="hook-box">
+                <strong>Формула успіху:</strong> Питання, що болить + Обіцянка рішення + Динамічний кадр.
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-num">02</div>
+            <h2>Сценарна структура</h2>
+            <p>Не пишіть текст дослівно. Створюйте <b>тези</b>:</p>
+            <ul>
+                <li>Вступ (Гачок)</li>
+                <li>Тіло (Користь/Дія)</li>
+                <li>Кульмінація (Секретний соус)</li>
+                <li>Заклик до дії (CTA)</li>
+            </ul>
+        </div>
+
+        <div class="step-card">
+            <div class="step-num">03</div>
+            <h2>Технічна якість</h2>
+            <p>Звук важливіший за картинку. Глядач вибачить погане відео, але не вибачить поганий звук.</p>
+            <p class="tip">💡 Порада: Використовуйте петличку або хоча б дротові навушники.</p>
+        </div>
+    </div>
+
+    <div style="margin-top: 80px;">
+        <h2 style="text-align: center; color: var(--secondary); text-transform: uppercase;">🚀 Advanced Skills: Рівень Pro</h2>
+        
+        <div class="content-grid" style="margin-top: 40px;">
+            <div class="step-card">
+                <h3>📈 Алгоритми та Охоплення</h3>
+                <p>Головний показник — <b>Retention Rate</b> (утримання). Якщо відео дивляться до кінця, платформа просуває його далі.</p>
+                <div class="hook-box" style="font-size: 0.9rem;">
+                    <b>Порада:</b> Публікуй у пік активності (18:00–21:00). Використовуй 3-5 релевантних хештегів.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <h3>🔊 Sound Design</h3>
+                <p>Звукові ефекти (Whoosh, Pop, Ding) акцентують увагу на появі тексту чи зміні кадру.</p>
+                <p class="tip">Музика має бути на фоні (-20dB), а голос — чітким та гучним.</p>
+            </div>
+
+            <div class="step-card">
+                <h3>🎨 Кіношна Колористика</h3>
+                <p>Навіть мобільне відео стане кращим, якщо:</p>
+                <ul>
+                    <li>Зменшити експозицію (щоб не було "пересвітів")</li>
+                    <li>Додати трішки теплого відтінку (Saturation)</li>
+                    <li>Використовувати фільтри типу "Teal & Orange"</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h3>💡 Світлові схеми</h3>
+                <p><b>Схема "Трьох точок" вдома:</b></p>
+                <ul style="font-size: 0.9rem;">
+                    <li><b>Малююче:</b> Вікно (під кутом 45°).</li>
+                    <li><b>Заповнювальне:</b> Білий аркуш з іншого боку.</li>
+                    <li><b>Контрове:</b> Настільна лампа ззаду.</li>
+                </ul>
+            </div>
+
+            <div class="step-card ai-card" style="grid-column: 1 / -1; border: 1px dashed var(--secondary);">
+                <h3>🤖 AI для Творчості (Нейромережі)</h3>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <strong>Subtitles:</strong> CapCut або Submagic.
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <strong>Audio:</strong> Adobe Podcast (прибирає шум).
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <strong>B-Roll:</strong> Leonardo.ai або Midjourney.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="checklist-section">
+        <h3>✅ Чек-лист ідеального відео:</h3>
+        <label class="check-item"><input type="checkbox"> Світло падає на обличчя, а не в спину</label>
+        <label class="check-item"><input type="checkbox"> Фон чистий і не відволікає</label>
+        <label class="check-item"><input type="checkbox"> Динамічний монтаж (зміна кадрів кожні 3-5 сек)</label>
+        <label class="check-item"><input type="checkbox"> Наявність субтитрів (80% дивляться без звуку)</label>
+        <label class="check-item"><input type="checkbox"> Чіткий заклик: "Підпишись", "Збережи"</label>
+        
+        <div style="text-align: center;">
+            <a href="#" class="btn-action">Завантажити шаблон сценарію</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Content Creation Academy. Створюй впевнено!</p>
+</footer>
+
+</body>
+</html>
